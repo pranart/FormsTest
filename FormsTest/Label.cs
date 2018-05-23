@@ -9,7 +9,6 @@ namespace FormsTest
     {
         public Label()
         {
-            TextColor = Color.Blue;
             DependencyService.Get<IFormsTest>().AddFeature(new FeaturePair(GetAutomationId, GetProperty));
         }
 		public string GetAutomationId()
