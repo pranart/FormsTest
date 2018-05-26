@@ -8,7 +8,7 @@ namespace FormsTest
     {
         public WebView()
         {
-            DependencyService.Get<IFormsTest>().AddFeature(new FeaturePair(GetAutomationId, GetProperty));
+            DependencyService.Get<IFormsTest>()?.AddFeature(new FeaturePair(GetAutomationId, GetProperty));
         }
         public string GetAutomationId()
         {

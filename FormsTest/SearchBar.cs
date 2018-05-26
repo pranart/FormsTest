@@ -8,7 +8,7 @@ namespace FormsTest
     {
         public SearchBar()
         {
-            DependencyService.Get<IFormsTest>().AddFeature(new FeaturePair(GetAutomationId, GetProperty));
+            DependencyService.Get<IFormsTest>()?.AddFeature(new FeaturePair(GetAutomationId, GetProperty));
         }
         public string GetAutomationId()
         {

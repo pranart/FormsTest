@@ -12,12 +12,12 @@ namespace FormsTest
 		protected override void OnAppearing()
 		{
             base.OnAppearing();
-            DependencyService.Get<IFormsTest>().PushPage(AutomationId);
+            DependencyService.Get<IFormsTest>()?.PushPage(AutomationId);
 		}
 		protected override void OnDisappearing()
 		{
             base.OnDisappearing();
-            DependencyService.Get<IFormsTest>().PopPage(AutomationId);
+            DependencyService.Get<IFormsTest>()?.PopPage(AutomationId);
 		}
 	}
 }

@@ -9,7 +9,9 @@ namespace FormsTest
     {
         public ListView()
         {
-            DependencyService.Get<IFormsTest>().AddFeature(new FeaturePair(GetAutomationId, GetProperty));
+			var formsTest = DependencyService.Get<IFormsTest>();
+            
+			formsTest?.AddFeature(new FeaturePair(GetAutomationId, GetProperty));
         }
         public string GetAutomationId()
         {
